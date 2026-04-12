@@ -14,7 +14,7 @@ const STRAIGHT = f(0, 0, 0, 0);
 export const ACTUAL_POSES = {
   // === NUMBERS 0-10 ===
   // 0: O shape, fingertips touching thumb
-  '0': { thumb: f(0.6, 0.4, 0, 0.2), index: f(0.9, 0.8, 0.5, 0), middle: f(0.9, 0.8, 0.5, 0), ring: f(0.9, 0.8, 0.5, 0), pinky: f(0.9, 0.8, 0.5, 0), wrist: w() },
+  '0': { thumb: f(0.6, 0.5, 0.5, 0.3), index: f(0.9, 1.1, 0.8, 0.05), middle: f(0.9, 1.1, 0.8, 0), ring: f(0.9, 1.1, 0.8, -0.05), pinky: f(0.9, 1.1, 0.8, -0.1), wrist: w() },
   
   // 1: Index up, thumb closed over curled fingers
   '1': { thumb: CURL_THUMB_OVER, index: STRAIGHT, middle: CURL_FULL, ring: CURL_FULL, pinky: CURL_FULL, wrist: w() },
@@ -48,31 +48,31 @@ export const ACTUAL_POSES = {
 
   // === ALPHABET A-Z ===
   // A: Fist, thumb straight up to the side
-  A: { thumb: f(0.1, 0, 0, 0.5), index: CURL_FULL, middle: CURL_FULL, ring: CURL_FULL, pinky: CURL_FULL, wrist: w() },
+  A: { thumb: f(0.2, 0, 0, 0.6), index: CURL_FULL, middle: CURL_FULL, ring: CURL_FULL, pinky: CURL_FULL, wrist: w(0, 0.2, 0) },
   
   // B: Hand flat, thumb folded fully across the palm
   B: { thumb: f(1.2, 0.2, 0, -0.5), index: STRAIGHT, middle: STRAIGHT, ring: STRAIGHT, pinky: STRAIGHT, wrist: w() },
   
   // C: Perfect semi-circle C shape
-  C: { thumb: f(0.5, 0.3, 0.2, 0.4), index: f(0.5, 0.5, 0.3, 0), middle: f(0.5, 0.5, 0.3, 0), ring: f(0.5, 0.5, 0.3, 0), pinky: f(0.5, 0.5, 0.3, 0), wrist: w() },
+  C: { thumb: f(0.4, 0.4, 0.2, 0.4), index: f(0.7, 0.8, 0.5, 0.05), middle: f(0.7, 0.8, 0.5, 0), ring: f(0.7, 0.8, 0.5, -0.05), pinky: f(0.7, 0.8, 0.5, -0.1), wrist: w() },
   
   // D: Index straight, thumb touching middle, ring, pinky
   D: { thumb: f(0.6, 0.3, 0, 0), index: STRAIGHT, middle: f(1.0, 1.0, 0.8, 0), ring: f(1.0, 1.0, 0.8, 0), pinky: f(1.0, 1.0, 0.8, 0), wrist: w() },
   
-  // E: Fingers tightly curled at knuckles (bases curled, tips straight into palm), thumb crossed below
-  E: { thumb: f(1.0, 0.2, 0, -0.4), index: f(1.6, 1.6, 0.2, 0), middle: f(1.6, 1.6, 0.2, 0), ring: f(1.6, 1.6, 0.2, 0), pinky: f(1.6, 1.6, 0.2, 0), wrist: w() },
+  // E: Fingers tightly curled at knuckles (tips touching palm/thumb), thumb crossed below
+  E: { thumb: f(1.0, 0.4, 0.1, -0.5), index: f(1.5, 1.6, 0.8, 0), middle: f(1.5, 1.6, 0.8, 0), ring: f(1.5, 1.6, 0.8, 0), pinky: f(1.5, 1.6, 0.8, 0), wrist: w() },
   
   // F: Index tip to thumb tip, others spread straight (Same as 9)
   F: { thumb: f(0.4, 0.3, 0.2, -0.1), index: f(1.2, 1.2, 1.0, 0.1), middle: f(0, 0, 0, 0.05), ring: f(0, 0, 0, -0.05), pinky: f(0, 0, 0, -0.2), wrist: w() },
   
-  // G: Index and thumb straight acting like a pinch parallel, other fingers curled, wrist turned SIDEWAYS
-  G: { thumb: f(0, 0, 0, 0.3), index: STRAIGHT, middle: CURL_FULL, ring: CURL_FULL, pinky: CURL_FULL, wrist: w(0, -1.5, 0) },
+  // G: Index and thumb extended parallel acting like a pinch, other fingers curled, wrist turned SIDEWAYS
+  G: { thumb: f(0.1, 0.1, 0, 0.4), index: STRAIGHT, middle: CURL_FULL, ring: CURL_FULL, pinky: CURL_FULL, wrist: w(0, -1.5, 0) },
   
   // H: Index and middle straight and parallel, thumb tucked, wrist turned SIDEWAYS
-  H: { thumb: CURL_THUMB_REST, index: f(0, 0, 0, 0.05), middle: f(0, 0, 0, -0.05), ring: CURL_FULL, pinky: CURL_FULL, wrist: w(0, -1.5, 0) },
+  H: { thumb: f(0.8, 0.4, 0, -0.3), index: f(0, 0, 0, 0.02), middle: f(0, 0, 0, -0.02), ring: CURL_FULL, pinky: CURL_FULL, wrist: w(0, -1.5, 0) },
   
-  // I: Pinky straight up, thumb crosses index/middle
-  I: { thumb: CURL_THUMB_REST, index: CURL_FULL, middle: CURL_FULL, ring: CURL_FULL, pinky: STRAIGHT, wrist: w() },
+  // I: Pinky straight up, thumb crosses index/middle deeply
+  I: { thumb: f(1.0, 0.3, 0, -0.6), index: CURL_FULL, middle: CURL_FULL, ring: CURL_FULL, pinky: STRAIGHT, wrist: w() },
   
   // J: Swooping I shape
   J: { thumb: CURL_THUMB_REST, index: CURL_FULL, middle: CURL_FULL, ring: CURL_FULL, pinky: STRAIGHT, wrist: w(-0.5, -0.5, 0.4) },
@@ -83,32 +83,32 @@ export const ACTUAL_POSES = {
   // L: Index up, thumb straight out (Right angle)
   L: { thumb: f(0, 0, 0, 0.6), index: STRAIGHT, middle: CURL_FULL, ring: CURL_FULL, pinky: CURL_FULL, wrist: w() },
   
-  // M: Tucked thumb UNDER index, middle, and ring. Those 3 bend down.
-  M: { thumb: CURL_THUMB_TUCK, index: f(1.5, 1.4, 1.0, 0), middle: f(1.5, 1.4, 1.0, 0), ring: f(1.5, 1.4, 1.0, 0), pinky: CURL_FULL, wrist: w() },
+  // M: Thumb passing under index, middle, and ring. Fingers form a fist covering thumb.
+  M: { thumb: f(1.4, 0.3, 0, -0.6), index: f(1.4, 1.5, 1.2, 0), middle: f(1.4, 1.5, 1.2, 0), ring: f(1.4, 1.5, 1.2, 0), pinky: CURL_FULL, wrist: w() },
   
-  // N: Tucked thumb UNDER index and middle. Those 2 bend down.
-  N: { thumb: CURL_THUMB_TUCK, index: f(1.5, 1.4, 1.0, 0), middle: f(1.5, 1.4, 1.0, 0), ring: CURL_FULL, pinky: CURL_FULL, wrist: w() },
+  // N: Thumb passing under index and middle. Fingers form a fist covering thumb.
+  N: { thumb: f(1.2, 0.3, 0, -0.4), index: f(1.4, 1.5, 1.2, 0), middle: f(1.4, 1.5, 1.2, 0), ring: CURL_FULL, pinky: CURL_FULL, wrist: w() },
   
-  // O: Same as 0
-  O: { thumb: f(0.6, 0.4, 0, 0.2), index: f(0.9, 0.8, 0.5, 0), middle: f(0.9, 0.8, 0.5, 0), ring: f(0.9, 0.8, 0.5, 0), pinky: f(0.9, 0.8, 0.5, 0), wrist: w() },
+  // O: Fingers precisely touch thumb tip
+  O: { thumb: f(0.6, 0.5, 0.5, 0.3), index: f(0.9, 1.1, 0.8, 0.05), middle: f(0.9, 1.1, 0.8, 0), ring: f(0.9, 1.1, 0.8, -0.05), pinky: f(0.9, 1.1, 0.8, -0.1), wrist: w() },
   
-  // P: K shape but facing down
-  P: { thumb: f(0.3, 0, 0, 0.3), index: STRAIGHT, middle: f(0.9, 0, 0, 0), ring: CURL_FULL, pinky: CURL_FULL, wrist: w(1.5, -0.5, 0) },
+  // P: Downward pointing K (thumb touches middle finger base)
+  P: { thumb: f(0.3, 0, 0, 0.3), index: f(0.2, 0, 0, 0.05), middle: f(1.0, 0, 0, -0.05), ring: CURL_FULL, pinky: CURL_FULL, wrist: w(1.2, -0.6, 0.2) },
   
-  // Q: G shape but facing down
-  Q: { thumb: f(0, 0, 0, 0.3), index: STRAIGHT, middle: CURL_FULL, ring: CURL_FULL, pinky: CURL_FULL, wrist: w(1.5, -0.3, 0) },
+  // Q: Downward pointing G (index and thumb parallel)
+  Q: { thumb: f(0.1, 0.1, 0, 0.4), index: f(0.2, 0, 0, 0), middle: CURL_FULL, ring: CURL_FULL, pinky: CURL_FULL, wrist: w(1.2, 0, 0) },
   
-  // R: Index and Middle crossed
-  R: { thumb: CURL_THUMB_REST, index: f(0, 0, 0, -0.2), middle: f(0, 0, 0, 0.2), ring: CURL_FULL, pinky: CURL_FULL, wrist: w() },
+  // R: Index and Middle crossed neatly (middle wraps behind index)
+  R: { thumb: CURL_THUMB_OVER, index: f(0, 0, 0, -0.1), middle: f(0.1, 0.2, 0, 0.15), ring: CURL_FULL, pinky: CURL_FULL, wrist: w() },
   
-  // S: Solid fist, Thumb solidly tucked OVER the middle of index & middle fingers
-  S: { thumb: CURL_THUMB_OVER, index: CURL_FULL, middle: CURL_FULL, ring: CURL_FULL, pinky: CURL_FULL, wrist: w() },
+  // S: Solid fist, Thumb wrapped OVER the middle of index & middle fingers
+  S: { thumb: f(0.5, 0.3, 0, -0.4), index: f(1.4, 1.4, 1.2, 0), middle: f(1.4, 1.4, 1.2, 0), ring: f(1.4, 1.4, 1.2, 0), pinky: f(1.4, 1.4, 1.2, 0), wrist: w() },
   
-  // T: Thumb tucked ONLY under the index finger
-  T: { thumb: CURL_THUMB_TUCK, index: f(1.5, 1.4, 1.0, 0), middle: CURL_FULL, ring: CURL_FULL, pinky: CURL_FULL, wrist: w() },
+  // T: Thumb squarely tucked ONLY under the index finger
+  T: { thumb: f(0.5, 0.2, 0, -0.1), index: f(0.8, 1.2, 1.0, 0), middle: f(1.4, 1.4, 1.2, 0), ring: f(1.4, 1.4, 1.2, 0), pinky: f(1.4, 1.4, 1.2, 0), wrist: w() },
   
   // U: Index and Middle straight UP and pressed together tightly
-  U: { thumb: CURL_THUMB_REST, index: f(0, 0, 0, -0.05), middle: f(0, 0, 0, 0.05), ring: CURL_FULL, pinky: CURL_FULL, wrist: w() },
+  U: { thumb: CURL_THUMB_OVER, index: f(0, 0, 0, -0.03), middle: f(0, 0, 0, 0.03), ring: CURL_FULL, pinky: CURL_FULL, wrist: w() },
   
   // V: Index and Middle spread (Same as 2)
   V: { thumb: CURL_THUMB_OVER, index: f(0, 0, 0, 0.1), middle: f(0, 0, 0, -0.1), ring: CURL_FULL, pinky: CURL_FULL, wrist: w() },
